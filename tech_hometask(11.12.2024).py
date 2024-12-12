@@ -1,3 +1,4 @@
+#1
 class Password:
     def valid(text):
         uppercase=0
@@ -20,7 +21,38 @@ class Password:
             print("Your password is Invalid")
 txt=input("Enter the password:")
 Password.valid(txt)
+##1 the input must be in uppercase
+class Password:
+    def valid(text):
+        uppercase = 0
+        lowercase = 0
+        digit = 0
+        special_character = 0
+        length = len(text)
 
+        if not text[0].isupper():
+            print("Your password is Invalid: The first letter must be uppercase.")
+            return
+        
+        for i in text:
+            if i.isupper():
+                uppercase += 1
+            elif i.islower():
+                lowercase += 1
+            elif i.isdigit():
+                digit += 1
+            else:
+                special_character += 1
+
+        if uppercase >= 1 and lowercase >= 1 and digit >= 1 and special_character >= 1 and length >= 8:
+            print("Your password is Valid")
+        else:
+            print("Your password is Invalid")
+
+txt = input("Enter the password: ")
+Password.valid(txt)
+
+#2
 class TextProcess:
     def __init__(self,text):
         self.text=text
