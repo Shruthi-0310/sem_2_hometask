@@ -3,7 +3,7 @@ class Password:
         uppercase=0
         lowercase=0
         digit=0
-        spl=0
+        special charecter=0
         length=len(text)
         for i in text:
             if i.isupper():
@@ -13,8 +13,8 @@ class Password:
             elif i.isdigit():
                 digit=1
             else:
-                spl+=1
-        if uppercase>=1 and lowercase>=1 and digit>=1 and spl>=1 and length>=8:
+                special charecter+=1
+        if uppercase>=1 and lowercase>=1 and digit>=1 and special charecter>=1 and length>=8:
             print("Your password is Valid")
         else:
             print("Your password is Invalid")
